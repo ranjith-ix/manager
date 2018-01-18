@@ -51,9 +51,11 @@ class EmployeeCreate extends Component{
                </CardSection>
 
                <CardSection>
-                   <Button onPress={this.onCButtonPress().bind(this)}>
-                       Create
-                    </Button>
+                       <Button 
+                          onPress={this.onCButtonPress.bind(this)}
+                       >
+                           Create
+                       </Button>
                </CardSection>
            
            </Card>
@@ -68,10 +70,12 @@ const styles={
     },
 }
 
-const mapStateToProps= ({employeeForm}) =>{
-    const { name, phone, shift }=employeeForm;
+const mapStateToProps = (state) =>{
+    const { name, phone, shift } = state.employeeForm;
     
     return { name, phone, shift };
 }
 
-export default connect(mapStateToProps,{ employeeUpdate,employeeCreate })(EmployeeCreate);
+export default connect(mapStateToProps, { 
+    employeeUpdate, employeeCreate 
+})(EmployeeCreate);
