@@ -1,6 +1,6 @@
-import React,{Component} from 'react';
-import {Text} from 'react-native';
-import {cardSection, CardSection} from './common';
+import React,{ Component } from 'react';
+import { Text } from 'react-native';
+import { CardSection } from './common';
 
 class ListItem extends Component{
     render(){
@@ -10,8 +10,8 @@ class ListItem extends Component{
             <CardSection>
                 <Text style={styles.titleStyle}>
                     {name}
-                    </Text>
-                    </CardSection>
+                </Text>
+            </CardSection>
         );
     }
 }
@@ -21,5 +21,5 @@ const styles={
         fontSize:18,
         paddingLeft:15
     }
-}
+};
 export default ListItem;

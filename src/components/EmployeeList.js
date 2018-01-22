@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import React,{ Component }from 'react';
-import {ListView} from 'react-native';
-import {ListItem} from './ListItem';
-import {connect} from 'react-redux';
-import {employeesFetch} from '../actions';
+import React,{ Component } from 'react';
+import { ListView } from 'react-native';
+import  ListItem  from './ListItem';
+import { connect } from 'react-redux';
+import { employeesFetch } from '../actions';
 
 
 class EmployeeList extends Component{
@@ -27,8 +27,8 @@ class EmployeeList extends Component{
 
     }
     renderRow(employee){
-        return <ListItem employee={employee}/>
-
+       // console.log(employee);
+        return <ListItem employee={employee} />;
     }
 
     render(){
@@ -38,7 +38,6 @@ class EmployeeList extends Component{
            enableEmptySections
            dataSource={this.dataSource}
            renderRow={this.renderRow}
-           
            />
 
         );
